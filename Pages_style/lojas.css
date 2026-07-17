@@ -1,0 +1,362 @@
+/* ===== Barra de anúncio ===== */
+.anuncio-bar {
+    background-color: var(--accent-gold);
+    color: var(--bg-main);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* ===== Barra de benefícios ===== */
+.trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 1.5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(244, 245, 247, 0.08);
+    border-bottom: 1px solid rgba(244, 245, 247, 0.08);
+}
+
+.trust-bar li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    max-width: 240px;
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.trust-bar svg {
+    color: var(--accent-gold);
+    flex-shrink: 0;
+}
+
+/* ===== Banner TCGBRASA Merch ===== */
+.merch-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--accent-gold);
+    border-radius: var(--radius);
+    box-shadow: 0 0 32px rgba(229, 169, 60, 0.2);
+}
+
+.merch-selo {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-neon));
+    color: var(--bg-main);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.merch-icone {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #25D366;
+    color: var(--bg-main);
+}
+
+.merch-icone-pulso {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: 50%;
+    background-color: #25D366;
+    animation: pulso-merch 2s ease-out infinite;
+}
+
+.merch-icone svg {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes pulso-merch {
+    0% {
+        transform: scale(1);
+        opacity: 0.55;
+    }
+    100% {
+        transform: scale(1.9);
+        opacity: 0;
+    }
+}
+
+.merch-texto h2 {
+    color: var(--accent-gold);
+    margin-bottom: 0.4rem;
+}
+
+.merch-texto p {
+    opacity: 0.85;
+    max-width: 640px;
+}
+
+.merch-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    background-color: #25D366;
+    color: #0B1410;
+    font-weight: 700;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.merch-cta:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+@media (max-width: 640px) {
+    .merch-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .merch-selo {
+        position: static;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .merch-icone-pulso {
+        animation: none;
+    }
+}
+
+/* ===== Categorias (Pokémon / Lorcana) ===== */
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.categoria-tile {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 150px;
+    padding: 0;
+    border: 1px solid rgba(229, 169, 60, 0.15);
+    border-radius: var(--radius);
+    background-size: cover;
+    background-position: center;
+    background-color: var(--bg-surface);
+    cursor: pointer;
+    overflow: hidden;
+    filter: brightness(0.45) saturate(0.6);
+    transition: filter 0.3s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.categoria-tile:hover {
+    filter: brightness(0.75) saturate(0.85);
+    transform: translateY(-4px);
+    box-shadow: 0 0 24px rgba(229, 169, 60, 0.35);
+}
+
+.categoria-tile.active {
+    filter: brightness(1) saturate(1);
+    border-color: var(--accent-neon);
+    transform: translateY(-4px);
+}
+
+.categoria-tile {
+    position: relative;
+}
+
+.categoria-tile .ver-tudo {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(18, 20, 28, 0.75);
+    border: 1px solid var(--accent-gold);
+    color: var(--text-main);
+    font-size: 0.75rem;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.categoria-tile:hover .ver-tudo,
+.categoria-tile.active .ver-tudo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Sub-categorias ===== */
+.subcategorias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.subcategorias[hidden] {
+    display: none;
+}
+
+.filtro-btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid rgba(229, 169, 60, 0.3);
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filtro-btn:hover {
+    border-color: var(--accent-neon);
+}
+
+.filtro-btn.active {
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-neon));
+    color: var(--bg-main);
+    font-weight: 700;
+    border-color: transparent;
+}
+
+/* Pílula "Produtos com Booster" — categoria nova, precisa chamar atenção */
+.filtro-btn--dinamico {
+    background: linear-gradient(90deg, var(--accent-gold), var(--accent-neon), var(--accent-gold));
+    background-size: 200% 100%;
+    color: var(--bg-main);
+    font-weight: 700;
+    border-color: transparent;
+    animation: shimmer-dinamico 3s linear infinite;
+}
+
+.filtro-btn--dinamico.active {
+    box-shadow: 0 0 16px rgba(0, 229, 255, 0.45);
+}
+
+@keyframes shimmer-dinamico {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .filtro-btn--dinamico {
+        animation: none;
+    }
+}
+
+/* ===== Cards de produto ===== */
+.produto-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.produto-imagem {
+    display: block;
+    aspect-ratio: 4 / 3;
+    background-color: var(--text-main);
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.produto-info {
+    padding: 1.25rem;
+}
+
+.produto-colecao {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.75rem;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.produto-info h3 {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--accent-gold);
+}
+
+.produto-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.produto-preco {
+    font-size: 0.9rem;
+    opacity: 0.75;
+}
+
+.produto-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(90deg, var(--accent-gold), var(--accent-neon), var(--accent-gold));
+    background-size: 200% 100%;
+    color: var(--bg-main);
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    animation: shimmer-dinamico 3s linear infinite;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.produto-cta:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .produto-cta {
+        animation: none;
+    }
+}
+
+.sem-eventos {
+    display: none;
+    margin-top: 1.5rem;
+    opacity: 0.7;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 500px) {
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+}

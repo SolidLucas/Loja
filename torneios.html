@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos e Torneios | TCGBRASA</title>
+    <link rel="stylesheet" href="Pages_style/index.css">
+    <link rel="stylesheet" href="Pages_style/torneios.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">TCGBRASA</div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="lojas.html">Loja</a></li>
+                <li><a href="torneios.html" class="active">Eventos e Torneios</a></li>
+                <li><a href="comunidade.html">Comunidade</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero page-hero">
+            <h1>Eventos & Torneios</h1>
+            <p>Fique por dentro dos próximos torneios e eventos da comunidade.</p>
+        </section>
+
+        <section class="filtros">
+            <div class="filtros-jogos">
+                <button class="filtro-btn active" data-jogo="todos">Todos</button>
+                <button class="filtro-btn" data-jogo="pokemon">Pokémon</button>
+                <button class="filtro-btn" data-jogo="magic">Magic: The Gathering</button>
+                <button class="filtro-btn" data-jogo="yugioh">Yu-Gi-Oh!</button>
+                <button class="filtro-btn" data-jogo="onepiece">One Piece</button>
+                <button class="filtro-btn" data-jogo="digimon">Digimon</button>
+                <button class="filtro-btn" data-jogo="lorcana">Lorcana</button>
+            </div>
+        </section>
+
+        <section class="torneios">
+            <h2>Próximos eventos</h2>
+            <div class="cards-grid" id="eventos-grid">
+                <div class="card evento-card" data-jogo="pokemon" data-fim="2026-09-13">
+                    <img class="evento-imagem" src="img/eventos/tcgcon.png" alt="Logo do TCGCON">
+                    <span class="evento-tag">Pokémon</span>
+                    <h3>TCGCON</h3>
+                    <p>12 e 13 de setembro de 2026 - Av. Manuel Bandeira, 360, Vila Leopoldina, São Paulo - SP</p>
+                </div>
+                <div class="card evento-card" data-jogo="magic" data-fim="2026-11-01">
+                    <img class="evento-imagem" src="img/eventos/CommandFest.png" alt="Logo do CommandFest">
+                    <span class="evento-tag">Magic</span>
+                    <h3>CommandFest</h3>
+                    <p>31 de outubro e 01 de novembro de 2026 - R. Luís Coelho, 323, Consolação, São Paulo - SP</p>
+                </div>
+                <div class="card evento-card" data-jogo="pokemon" data-fim="2026-11-22">
+                    <img class="evento-imagem" src="img/eventos/laic.jpg" alt="Logo do Campeonato Internacional Pokémon da América Latina (LAIC) 2026">
+                    <span class="evento-tag">Pokémon</span>
+                    <h3>Campeonato Internacional Pokémon da América Latina (LAIC) 2026</h3>
+                    <p>20 a 22 de novembro de 2026 - Local oficial a ser confirmado nos canais da Play! Pokémon</p>
+                </div>
+                <div class="card evento-card" data-jogo="yugioh">
+                    <span class="evento-tag">Yu-Gi-Oh!</span>
+                    <h3>Torneio Exemplo</h3>
+                    <p>Data - Local</p>
+                </div>
+            </div>
+            <p id="sem-eventos" class="sem-eventos">Nenhum evento encontrado para esse jogo ainda.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 TCGBRASA. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/torneios.js" defer></script>
+</body>
+</html>
