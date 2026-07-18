@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comunidade | TCGBRASA</title>
     <link rel="stylesheet" href="Pages_style/index.css">
+    <link rel="stylesheet" href="Pages_style/comunidade.css">
 </head>
 <body>
     <header class="site-header">
@@ -20,28 +21,156 @@
     </header>
 
     <main>
+        <section class="canal-destaque">
+            <div class="canal-banner">
+                <span class="canal-selo">YouTube</span>
+                <div class="canal-icone">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M8 7l9 5-9 5V7z"/></svg>
+                </div>
+                <div class="canal-texto">
+                    <h2>Canal APOLL TCG no YouTube</h2>
+                    <p>Acompanhe nosso conteúdo, novidades, lançamentos e produtos exclusivos da loja.</p>
+                    <a class="canal-cta" href="https://youtube.com/@apolltcg?si=SiLE9PjFavkFjSxq" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 7l9 5-9 5V7z"/></svg>
+                        Inscreva-se no Canal
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <section class="hero page-hero">
             <h1>Comunidade</h1>
-            <p>Conecte-se com outros jogadores, grupos e redes sociais da comunidade TCG.</p>
+            <p>Conecte-se com outros jogadores, descubra grupos e servidores, acompanhe criadores de conteúdo e fique por dentro dos próximos eventos. Este é o ponto de encontro da comunidade brasileira de TCG.</p>
+        </section>
+
+        <section class="stats">
+            <ul class="stats-grid">
+                <li class="stat-tile">
+                    <span class="stat-numero" data-metrica="jogadores">1.200+</span>
+                    <span class="stat-label">Jogadores conectados</span>
+                </li>
+                <li class="stat-tile">
+                    <span class="stat-numero" data-metrica="lojas">15+</span>
+                    <span class="stat-label">Lojas parceiras</span>
+                </li>
+                <li class="stat-tile">
+                    <span class="stat-numero" data-metrica="grupos">30+</span>
+                    <span class="stat-label">Grupos cadastrados</span>
+                </li>
+                <li class="stat-tile">
+                    <span class="stat-numero" data-metrica="eventos">40+</span>
+                    <span class="stat-label">Eventos publicados</span>
+                </li>
+                <li class="stat-tile">
+                    <span class="stat-numero" data-metrica="torneios">8</span>
+                    <span class="stat-label">Torneios ativos</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="filtros">
+            <div class="filtros-jogos">
+                <button class="filtro-btn active" data-jogo="todos">Todos</button>
+                <button class="filtro-btn" data-jogo="pokemon">Pokémon</button>
+                <button class="filtro-btn" data-jogo="lorcana">Lorcana</button>
+                <button class="filtro-btn" data-jogo="magic">Magic: The Gathering</button>
+                <button class="filtro-btn" data-jogo="yugioh">Yu-Gi-Oh!</button>
+                <button class="filtro-btn" data-jogo="onepiece">One Piece</button>
+                <button class="filtro-btn" data-jogo="fab">Flesh and Blood</button>
+            </div>
         </section>
 
         <section class="comunidade">
             <h2>Grupos & redes</h2>
+            <p>Canais oficiais da TCGBRASA e espaços para a comunidade se conectar.</p>
             <div class="cards-grid">
-                <a class="card" href="https://discord.gg/3YSHkBdrX" target="_blank" rel="noopener">
+                <a class="card grupo-card reveal" data-jogo="geral" href="https://discord.gg/3YSHkBdrX" target="_blank" rel="noopener">
+                    <div class="grupo-cabecalho">
+                        <span class="grupo-icone grupo-icone--discord">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 5.5c-1.2-.6-2.5-1-3.9-1.2l-.2.4c1.3.3 2.4.8 3.5 1.5-2.9-1.4-6-1.4-8.9 0 1-.7 2.2-1.2 3.5-1.5l-.2-.4C10.5 4.5 9.2 4.9 8 5.5 5.3 9.4 4.6 13.2 5 17c1.5 1.1 2.9 1.8 4.3 2.2l.6-1.2c-.7-.3-1.4-.6-2-1 .2-.1.3-.2.5-.3 3.6 1.7 7.6 1.7 11.2 0 .2.1.3.2.5.3-.6.4-1.3.7-2 1l.6 1.2c1.4-.4 2.8-1.1 4.3-2.2.5-4.4-.7-8.1-2.7-11.5zM9.7 14.8c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7zm4.6 0c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.6 1.7-1.5 1.7z"/></svg>
+                        </span>
+                        <span class="grupo-badge">Oficial</span>
+                    </div>
                     <h3>Discord TCGBRASA</h3>
-                    <p>Entre no nosso servidor para conversar, tirar dúvidas e ficar por dentro de tudo.</p>
+                    <p>Converse, tire dúvidas e fique por dentro de tudo em tempo real com a comunidade.</p>
+                    <span class="grupo-cta">Entrar no servidor →</span>
                 </a>
-                <div class="card">
-                    <h3>Grupo Exemplo</h3>
-                    <p>WhatsApp ou fórum da comunidade.</p>
+
+                <a class="card grupo-card reveal" data-jogo="geral" href="https://youtube.com/@apolltcg?si=SiLE9PjFavkFjSxq" target="_blank" rel="noopener">
+                    <div class="grupo-cabecalho">
+                        <span class="grupo-icone grupo-icone--youtube">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M8 7l9 5-9 5V7z"/></svg>
+                        </span>
+                        <span class="grupo-badge">Oficial</span>
+                    </div>
+                    <h3>Canal APOLL TCG</h3>
+                    <p>Conteúdo em vídeo, novidades e lançamentos da loja no YouTube.</p>
+                    <span class="grupo-cta">Assistir no YouTube →</span>
+                </a>
+
+                <a class="card grupo-card grupo-card--cadastro reveal" data-jogo="geral" href="https://discord.gg/3YSHkBdrX" target="_blank" rel="noopener">
+                    <div class="grupo-cabecalho">
+                        <span class="grupo-icone grupo-icone--add">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        </span>
+                    </div>
+                    <h3>Cadastre sua comunidade</h3>
+                    <p>Tem um grupo, servidor ou loja de TCG? Fale com a gente no Discord para aparecer por aqui.</p>
+                    <span class="grupo-cta">Entrar em contato →</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="criadores">
+            <h2>Criadores da Comunidade</h2>
+            <p>Criadores de conteúdo parceiros que ajudam a comunidade brasileira de TCG a crescer.</p>
+            <div class="cards-grid">
+                <div class="card criador-card reveal" data-jogo="pokemon">
+                    <div class="criador-topo">
+                        <span class="criador-avatar" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+                        </span>
+                        <span class="grupo-badge grupo-badge--exemplo">Exemplo</span>
+                    </div>
+                    <h3>Criador Exemplo</h3>
+                    <span class="criador-plataforma">YouTube · Pokémon TCG</span>
+                    <p>Conteúdo sobre estratégias, unboxings e novidades do universo Pokémon.</p>
+                    <span class="criador-cta">Ver canal</span>
+                </div>
+
+                <div class="card criador-card reveal" data-jogo="magic">
+                    <div class="criador-topo">
+                        <span class="criador-avatar" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+                        </span>
+                        <span class="grupo-badge grupo-badge--exemplo">Exemplo</span>
+                    </div>
+                    <h3>Criadora Exemplo</h3>
+                    <span class="criador-plataforma">Twitch · Magic: The Gathering</span>
+                    <p>Lives de deckbuilding e cobertura de torneios de Magic.</p>
+                    <span class="criador-cta">Ver canal</span>
                 </div>
             </div>
+        </section>
+
+        <section class="eventos-recentes">
+            <h2>Próximos eventos</h2>
+            <div class="cards-grid" id="eventos-teaser-grid"></div>
+            <p id="sem-eventos-teaser" class="sem-eventos">Nenhum evento confirmado no momento. Fique de olho nos nossos canais!</p>
+            <a class="ver-todos-link" href="torneios.html">Ver todos os eventos →</a>
         </section>
     </main>
 
     <footer class="site-footer">
+        <nav class="footer-nav">
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+        </nav>
         <p>&copy; 2026 TCGBRASA. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="js/eventos-data.js" defer></script>
+    <script src="js/comunidade.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

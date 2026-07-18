@@ -1,0 +1,169 @@
+/* ===== CTAs do Hero ===== */
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.75rem;
+}
+
+.hero-btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-btn--primario {
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-neon));
+    color: var(--bg-main);
+}
+
+.hero-btn--secundario {
+    border: 1px solid rgba(229, 169, 60, 0.4);
+    color: var(--text-main);
+}
+
+.hero-btn:hover {
+    transform: translateY(-2px);
+}
+
+.hero-btn--primario:hover {
+    opacity: 0.9;
+}
+
+.hero-btn--secundario:hover {
+    border-color: var(--accent-neon);
+}
+
+/* ===== Cards "Explore" ===== */
+.destaque-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background-color: rgba(0, 229, 255, 0.12);
+    color: var(--accent-neon);
+}
+
+.destaque-card p {
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+/* ===== Sobre o TCGBRASA ===== */
+.sobre p {
+    opacity: 0.85;
+    max-width: 850px;
+    font-size: 1.05rem;
+}
+
+/* ===== Criadores de Conteúdo ===== */
+.criador-destaque {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--accent-gold);
+    border-radius: var(--radius);
+    box-shadow: 0 0 32px rgba(229, 169, 60, 0.15);
+}
+
+.criador-destaque-selo {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-neon));
+    color: var(--bg-main);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.criador-destaque-icone {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: #FF0000;
+    color: var(--text-main);
+}
+
+.criador-destaque-texto h3 {
+    color: var(--accent-gold);
+    margin-bottom: 0.3rem;
+}
+
+.criador-destaque-texto .criador-plataforma {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.criador-destaque-texto p {
+    opacity: 0.85;
+    max-width: 620px;
+}
+
+.criador-destaque-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    background-color: #FF0000;
+    color: var(--text-main);
+    font-weight: 700;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.criador-destaque-cta:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.criadores-grid-home {
+    margin-top: 1.5rem;
+}
+
+.criador-card-secundario .criador-plataforma {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.75rem;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.criador-card-secundario p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+    .criador-destaque {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .criador-destaque-selo {
+        position: static;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+    }
+}

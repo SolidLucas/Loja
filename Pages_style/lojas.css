@@ -220,29 +220,6 @@
     display: none;
 }
 
-.filtro-btn {
-    padding: 0.5rem 1.2rem;
-    border-radius: 999px;
-    border: 1px solid rgba(229, 169, 60, 0.3);
-    background-color: var(--bg-surface);
-    color: var(--text-main);
-    font-family: inherit;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.filtro-btn:hover {
-    border-color: var(--accent-neon);
-}
-
-.filtro-btn.active {
-    background: linear-gradient(135deg, var(--accent-gold), var(--accent-neon));
-    color: var(--bg-main);
-    font-weight: 700;
-    border-color: transparent;
-}
-
 /* Pílula "Produtos com Booster" — categoria nova, precisa chamar atenção */
 .filtro-btn--dinamico {
     background: linear-gradient(90deg, var(--accent-gold), var(--accent-neon), var(--accent-gold));
@@ -346,12 +323,6 @@
     .produto-cta {
         animation: none;
     }
-}
-
-.sem-eventos {
-    display: none;
-    margin-top: 1.5rem;
-    opacity: 0.7;
 }
 
 /* ===== Responsivo ===== */

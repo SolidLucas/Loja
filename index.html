@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCGBRASA</title>
     <link rel="stylesheet" href="Pages_style/index.css">
+    <link rel="stylesheet" href="Pages_style/home.css">
 </head>
 <body>
     <header class="site-header">
@@ -22,32 +23,62 @@
     <main>
         <section class="hero">
             <h1>TCGBRASA</h1>
-            <p>Encontre aqui tudo sobre TCG e sua comunidade, desde decks, cartas, torneios e muito mais!</p>
+            <p>O portal brasileiro dos Trading Card Games: encontre produtos na loja, acompanhe os próximos eventos e faça parte de uma comunidade apaixonada por TCG.</p>
+            <div class="hero-cta">
+                <a class="hero-btn hero-btn--primario" href="lojas.html">Explorar Loja</a>
+                <a class="hero-btn hero-btn--secundario" href="comunidade.html">Comunidade</a>
+            </div>
+        </section>
+
+        <section class="sobre">
+            <h2>Sobre o TCGBRASA</h2>
+            <p>O TCGBRASA nasceu para ser o ponto de encontro da comunidade brasileira de Trading Card Games. Aqui você encontra em um só lugar a loja com cartas avulsas e produtos selados, o calendário de eventos e torneios da cena competitiva, e espaços para se conectar com outros jogadores, grupos e criadores de conteúdo. Nosso objetivo é crescer junto com a comunidade, tornando mais fácil descobrir, jogar e fazer parte do universo dos TCGs no Brasil.</p>
         </section>
 
         <section class="destaques">
             <h2>Explore</h2>
             <div class="cards-grid">
-                <a class="card reveal" href="lojas.html">
+                <a class="card destaque-card reveal" href="lojas.html">
+                    <span class="destaque-icone" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+                    </span>
                     <h3>Loja</h3>
-                    <p>Cartas avulsas, selados e acessórios oficiais do TCGBRASA.</p>
+                    <p>Cartas avulsas, produtos selados e acessórios oficiais para o seu próximo torneio.</p>
                 </a>
-                <a class="card reveal" href="torneios.html">
+                <a class="card destaque-card reveal" href="torneios.html">
+                    <span class="destaque-icone" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4h8v4a4 4 0 0 1-8 0V4z"/><path d="M4 6h4M16 6h4M10 14v3M14 14v3M8 20h8"/></svg>
+                    </span>
                     <h3>Eventos & Torneios</h3>
-                    <p>Fique por dentro dos próximos eventos.</p>
+                    <p>Fique por dentro dos próximos torneios e competições da comunidade.</p>
                 </a>
-                <a class="card reveal" href="comunidade.html">
+                <a class="card destaque-card reveal" href="comunidade.html">
+                    <span class="destaque-icone" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.2"/><path d="M3.5 20c0-3 2.5-5 5.5-5s5.5 2 5.5 5"/><path d="M14 15.3c2.5.4 4 2 4 4.7"/></svg>
+                    </span>
                     <h3>Comunidade</h3>
-                    <p>Conecte-se com outros jogadores.</p>
+                    <p>Conecte-se com outros jogadores, grupos e criadores de conteúdo.</p>
                 </a>
             </div>
+        </section>
+
+        <section class="criadores-home">
+            <h2>Criadores de Conteúdo</h2>
+            <div class="criador-destaque" id="criador-destaque"></div>
+            <div class="cards-grid criadores-grid-home" id="criadores-grid" hidden></div>
         </section>
     </main>
 
     <footer class="site-footer">
+        <nav class="footer-nav">
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+        </nav>
         <p>&copy; 2026 TCGBRASA. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="js/criadores-data.js" defer></script>
+    <script src="js/home.js" defer></script>
     <script src="js/main.js" defer></script>
 </body>
 </html>

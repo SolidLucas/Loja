@@ -89,7 +89,7 @@ h1, h2 {
 .hero p {
     font-size: 1.1rem;
     color: var(--text-main);
-    max-width: 600px;
+    max-width: 760px;
     margin: 0 auto;
     opacity: 0.85;
 }
@@ -132,6 +132,59 @@ main section > p {
     margin-bottom: 2rem;
     opacity: 0.8;
     max-width: 700px;
+}
+
+/* ===== Filtros por jogo (reutilizado em Torneios, Loja e Comunidade) ===== */
+.filtros {
+    padding-bottom: 0;
+}
+
+.filtros-jogos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.filtro-btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid rgba(229, 169, 60, 0.3);
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filtro-btn:hover {
+    border-color: var(--accent-neon);
+}
+
+.filtro-btn.active {
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-neon));
+    color: var(--bg-main);
+    font-weight: 700;
+    border-color: transparent;
+}
+
+.evento-tag {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background-color: rgba(0, 229, 255, 0.12);
+    color: var(--accent-neon);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sem-eventos {
+    display: none;
+    margin-top: 1.5rem;
+    opacity: 0.7;
 }
 
 /* ===== Cards ===== */
@@ -184,8 +237,29 @@ main section > p {
     padding: 2rem;
     background-color: var(--bg-surface);
     color: var(--text-main);
-    opacity: 0.7;
     font-size: 0.9rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-nav a {
+    opacity: 0.8;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 1;
+    color: var(--accent-neon);
+}
+
+.site-footer p {
+    opacity: 0.7;
 }
 
 /* ===== Responsivo ===== */
