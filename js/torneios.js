@@ -42,7 +42,10 @@ function renderizarEventos() {
             ${evento.imagem ? `<img class="evento-imagem" src="${evento.imagem}" alt="${evento.alt}" loading="lazy">` : ''}
             <span class="evento-tag">${evento.tag}</span>
             <h3>${evento.titulo}</h3>
-            <p>${evento.descricao}</p>
+            <div class="evento-info">
+                ${evento.data ? `<p class="evento-data">${evento.data}</p>` : ''}
+                <p class="evento-local">${evento.local}</p>
+            </div>
         </div>
     `).join('');
 }

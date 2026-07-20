@@ -91,6 +91,21 @@
             <div class="cards-grid" id="produtos-grid"></div>
             <p id="sem-produtos" class="sem-eventos">Nenhum produto nessa categoria ainda.</p>
         </section>
+
+        <section class="feedbacks">
+            <h2>Feedbacks de Compradores</h2>
+            <p>Já comprou com a gente? Conte como foi sua experiência.</p>
+
+            <form id="feedback-form" class="feedback-form">
+                <textarea id="feedback-texto" name="texto" maxlength="500" rows="3" placeholder="Escreva seu feedback..." required></textarea>
+                <div class="feedback-form-rodape">
+                    <span id="feedback-status" class="feedback-status"></span>
+                    <button type="submit" class="feedback-enviar">Enviar feedback</button>
+                </div>
+            </form>
+
+            <div class="cards-grid" id="feedbacks-lista"></div>
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -101,6 +116,8 @@
         <p>&copy; 2026 TCGBRASA. Todos os direitos reservados.</p>
     </footer>
 
+    <script src="js/produtos-data.js" defer></script>
     <script src="js/lojas.js" defer></script>
+    <script src="js/feedbacks.js" defer></script>
 </body>
 </html>

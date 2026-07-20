@@ -50,13 +50,13 @@
 }
 
 .destaque-card p {
-    opacity: 0.8;
+    opacity: 0.85;
     font-size: 0.95rem;
 }
 
 /* ===== Sobre o TCGBRASA ===== */
 .sobre p {
-    opacity: 0.85;
+    opacity: 0.9;
     max-width: 850px;
     font-size: 1.05rem;
 }
@@ -109,13 +109,13 @@
     display: block;
     margin-bottom: 0.5rem;
     font-size: 0.75rem;
-    opacity: 0.6;
+    opacity: 0.65;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .criador-destaque-texto p {
-    opacity: 0.85;
+    opacity: 0.9;
     max-width: 620px;
 }
 
@@ -145,13 +145,13 @@
     display: block;
     margin-bottom: 0.3rem;
     font-size: 0.75rem;
-    opacity: 0.6;
+    opacity: 0.65;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .criador-card-secundario p {
-    opacity: 0.8;
+    opacity: 0.85;
     font-size: 0.9rem;
 }
 

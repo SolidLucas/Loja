@@ -91,7 +91,7 @@ h1, h2 {
     color: var(--text-main);
     max-width: 760px;
     margin: 0 auto;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 .page-hero {
@@ -130,7 +130,7 @@ main section h2::after {
 main section > p {
     margin-top: 1rem;
     margin-bottom: 2rem;
-    opacity: 0.8;
+    opacity: 0.85;
     max-width: 700px;
 }
 
@@ -181,10 +181,33 @@ main section > p {
     letter-spacing: 0.5px;
 }
 
+/* Cards de evento (usado em Torneios e no teaser da Comunidade): título, data e
+   local sempre alinhados no rodapé do card, mesmo quando o título quebra em 2 linhas */
+.evento-card,
+.evento-teaser-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.evento-info {
+    margin-top: auto;
+    padding-top: 0.75rem;
+}
+
+.evento-data {
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.evento-local {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
 .sem-eventos {
     display: none;
     margin-top: 1.5rem;
-    opacity: 0.7;
+    opacity: 0.75;
 }
 
 /* ===== Cards ===== */
@@ -231,6 +254,111 @@ main section > p {
     margin-bottom: 0.5rem;
 }
 
+/* ===== Cards de produto (reutilizado na Loja e na Home) ===== */
+.produto-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.produto-imagem {
+    display: block;
+    aspect-ratio: 4 / 3;
+    background-color: var(--text-main);
+}
+
+.produto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.produto-info {
+    padding: 1.25rem;
+}
+
+.produto-colecao {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.75rem;
+    opacity: 0.65;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.produto-info h3 {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--accent-gold);
+}
+
+.produto-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.produto-preco {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.produto-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(90deg, var(--accent-gold), var(--accent-neon), var(--accent-gold));
+    background-size: 200% 100%;
+    color: var(--bg-main);
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+    animation: shimmer-dinamico 3s linear infinite;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.produto-cta:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+@keyframes shimmer-dinamico {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .produto-cta {
+        animation: none;
+    }
+}
+
+.card-link-cta {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: var(--accent-neon);
+}
+
+/* Link "ver todos" (usado em teasers de conteúdo: eventos, produtos, etc.) */
+.ver-todos-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--accent-neon);
+    font-weight: 700;
+    transition: opacity 0.2s ease;
+}
+
+.ver-todos-link:hover {
+    opacity: 0.8;
+}
+
 /* ===== Footer ===== */
 .site-footer {
     text-align: center;
@@ -249,7 +377,7 @@ main section > p {
 }
 
 .footer-nav a {
-    opacity: 0.8;
+    opacity: 0.85;
     transition: opacity 0.2s ease, color 0.2s ease;
 }
 
@@ -259,7 +387,7 @@ main section > p {
 }
 
 .site-footer p {
-    opacity: 0.7;
+    opacity: 0.75;
 }
 
 /* ===== Responsivo ===== */

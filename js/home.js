@@ -1,6 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    renderizarProdutosDestaque();
     renderizarCriadores();
 });
+
+// Prévia de produtos a partir do catálogo compartilhado em js/produtos-data.js
+// (mesma fonte e mesmo template de card usados na Loja)
+function renderizarProdutosDestaque() {
+    const grid = document.getElementById('produtos-destaque-grid');
+    if (!grid || typeof PRODUTOS === 'undefined') return;
+
+    const destaques = PRODUTOS.slice(0, 3);
+    grid.replaceChildren(...destaques.map((produto) => criarCardProduto(produto, 'lojas.html#grupo-whatsapp')));
+}
 
 // Renderiza o criador em destaque (a partir de js/criadores-data.js) e, caso existam
 // outros criadores cadastrados, uma grade secundária abaixo dele.

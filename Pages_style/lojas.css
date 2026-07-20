@@ -28,7 +28,7 @@
     gap: 0.6rem;
     max-width: 240px;
     font-size: 0.8rem;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .trust-bar svg {
@@ -107,7 +107,7 @@
 }
 
 .merch-texto p {
-    opacity: 0.85;
+    opacity: 0.9;
     max-width: 640px;
 }
 
@@ -234,95 +234,94 @@
     box-shadow: 0 0 16px rgba(0, 229, 255, 0.45);
 }
 
-@keyframes shimmer-dinamico {
-    0% { background-position: 0% 50%; }
-    100% { background-position: 200% 50%; }
-}
-
 @media (prefers-reduced-motion: reduce) {
     .filtro-btn--dinamico {
         animation: none;
     }
 }
 
-/* ===== Cards de produto ===== */
-.produto-card {
-    padding: 0;
-    overflow: hidden;
+/* ===== Feedbacks de compradores ===== */
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 640px;
+    margin-bottom: 2rem;
 }
 
-.produto-imagem {
-    display: block;
-    aspect-ratio: 4 / 3;
-    background-color: var(--text-main);
+.feedback-form textarea {
+    padding: 0.9rem 1rem;
+    border-radius: var(--radius);
+    border: 1px solid rgba(229, 169, 60, 0.3);
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.95rem;
+    resize: vertical;
+    transition: border-color 0.2s ease;
 }
 
-.produto-imagem img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 1rem;
+.feedback-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-neon);
 }
 
-.produto-info {
-    padding: 1.25rem;
+.feedback-form-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.produto-colecao {
-    display: block;
-    margin-bottom: 0.3rem;
-    font-size: 0.75rem;
+.feedback-status {
+    font-size: 0.85rem;
+    opacity: 0.85;
+}
+
+.feedback-enviar {
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-neon));
+    color: var(--bg-main);
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.feedback-enviar:hover {
+    transform: translateY(-2px);
+}
+
+.feedback-enviar:disabled {
     opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.feedback-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feedback-data {
+    font-size: 0.75rem;
+    opacity: 0.65;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-.produto-info h3 {
-    margin-bottom: 1rem;
-    font-size: 1.05rem;
-    color: var(--accent-gold);
-}
-
-.produto-rodape {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-}
-
-.produto-preco {
-    font-size: 0.9rem;
-    opacity: 0.75;
-}
-
-.produto-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.5rem 1rem;
-    border-radius: 999px;
-    border: none;
-    background: linear-gradient(90deg, var(--accent-gold), var(--accent-neon), var(--accent-gold));
-    background-size: 200% 100%;
-    color: var(--bg-main);
-    font-size: 0.8rem;
-    font-weight: 700;
-    white-space: nowrap;
-    cursor: pointer;
-    animation: shimmer-dinamico 3s linear infinite;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.produto-cta:hover {
-    transform: translateY(-2px);
+.feedback-item p {
     opacity: 0.9;
+    font-size: 0.95rem;
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .produto-cta {
-        animation: none;
-    }
+.feedbacks-vazio {
+    opacity: 0.75;
 }
 
 /* ===== Responsivo ===== */

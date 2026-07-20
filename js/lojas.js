@@ -1,29 +1,7 @@
-// Catálogo de produtos. Cada card só é criado no DOM quando sua categoria/subcategoria
-// está selecionada, então imagens de produtos fora do filtro atual nunca chegam a ser baixadas.
-const PRODUTOS = [
-    {
-        categoria: 'pokemon',
-        subcategoria: 'etb',
-        colecao: 'Pokémon TCG',
-        titulo: 'ETB Heróis Excelsos',
-        imagem: 'img/produtos/etb-herois-excelsos.avif',
-    },
-    {
-        categoria: 'pokemon',
-        subcategoria: 'booster',
-        colecao: 'Pokémon TCG',
-        titulo: 'Blister Triplo Mega Evolução Equilíbrio Perfeito',
-        imagem: 'img/produtos/blister-triplo-megaevolucao-equilibrio-perfeito.avif',
-    },
-    {
-        categoria: 'lorcana',
-        subcategoria: 'booster',
-        colecao: 'Disney Lorcana',
-        titulo: 'Booster Unitário Fabled',
-        imagem: 'img/produtos/booster-unitario-fabled-lorcana.jpg',
-    },
-];
-
+// Catálogo de produtos (PRODUTOS) e o template do card (criarCardProduto) vêm de
+// js/produtos-data.js, compartilhado com a Home. Cada card só é criado no DOM quando
+// sua categoria/subcategoria está selecionada, então imagens fora do filtro atual
+// nunca chegam a ser baixadas.
 document.addEventListener('DOMContentLoaded', () => {
     const categoriaTiles = document.querySelectorAll('.categoria-tile');
     const grupoSubcategorias = document.querySelectorAll('.subcategorias');
@@ -81,32 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function criarCardProduto(produto) {
-        const card = document.createElement('div');
-        card.className = 'card produto-card';
-        card.dataset.categoria = produto.categoria;
-        card.dataset.subcategoria = produto.subcategoria;
-        card.innerHTML = `
-            <div class="produto-imagem">
-                <img src="${produto.imagem}" alt="${produto.titulo}" loading="lazy">
-            </div>
-            <div class="produto-info">
-                <span class="produto-colecao">${produto.colecao}</span>
-                <h3>${produto.titulo}</h3>
-                <div class="produto-rodape">
-                    <span class="produto-preco">Consulte o preço</span>
-                    <a class="produto-cta" href="#grupo-whatsapp">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                        </svg>
-                        Comprar no WhatsApp
-                    </a>
-                </div>
-            </div>
-        `;
-        return card;
-    }
-
     // Só renderiza os produtos da categoria/subcategoria ativas, em vez de manter
     // todo o catálogo no DOM e escondê-lo com display:none
     function renderizarProdutos() {
@@ -116,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return passaCategoria && passaSubcategoria;
         });
 
-        produtosGrid.replaceChildren(...visiveis.map(criarCardProduto));
+        produtosGrid.replaceChildren(...visiveis.map((produto) => criarCardProduto(produto)));
 
         if (semProdutos) {
             semProdutos.style.display = visiveis.length === 0 ? 'block' : 'none';
